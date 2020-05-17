@@ -6,13 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintGuide_percent="0.07"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintGuide_percent="0.93"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_textSearch"
+        android:layout_width="@dimen/searchTextWidth"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Enter the word here!!"
+        android:textAlignment="center"
+        android:ellipsize="end"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/searchEtMarginTop"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_search"
+         android:layout_width="@dimen/submitButtonWidth"
+        android:layout_height="wrap_content"
+        android:text="@string/Search"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/et_textSearch"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

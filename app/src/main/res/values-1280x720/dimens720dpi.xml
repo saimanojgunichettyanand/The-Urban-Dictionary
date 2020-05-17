@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="searchEtMarginTop">60dp</dimen>
+    <dimen name="buttonMarginTop">35dp</dimen>
+    <dimen name="searchTextWidth">300dp</dimen>
+    <dimen name="submitButtonWidth">200dp</dimen>
+</resources>
